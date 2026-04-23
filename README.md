@@ -49,7 +49,9 @@ Q(s, a) ← Q(s, a) + α * [r + γ * max Q(s', a') - Q(s, a)]
 
 ## Architecture
 
-The project follows an **Object-Oriented** architecture:
+The project follows an **Object-Oriented (OO)** architecture — a deliberate choice to maximize **readability and comprehension** of the Q-Learning algorithm. Each concept in the algorithm maps directly to a class with a clear responsibility, making it easier to follow the learning loop step by step.
+
+> **Note on performance:** OO design introduces overhead compared to purely value-type or functional approaches (e.g. struct-based or matrix-based implementations). However, for a grid of this scale and an educational context, that cost is completely negligible.
 
 ```
 GridViewModel       — manages grid state, training loop, and UI bindings
