@@ -6,7 +6,7 @@ An iOS app built with SwiftUI that visualizes the **Q-Learning** reinforcement l
 
 ## Screenshots
 
-![qgame simulator screenshot](screenshot/Simulator%20Screenshot%20-%20iPhone%2017%20Pro.png)
+<img src="screenshot/Simulator%20Screenshot%20-%20iPhone%2017%20Pro.png" height="1311" />
 
 ---
 
