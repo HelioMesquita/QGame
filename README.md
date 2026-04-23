@@ -1,4 +1,4 @@
-# <img src="qgame/Assets.xcassets/logo.imageset/logo.jpeg" height="30" /> Q-Game — Q-Learning Visualizer for iOS
+# Q-Game — Q-Learning Visualizer for iOS
 
 An iOS app built with SwiftUI that visualizes the **Q-Learning** reinforcement learning algorithm on an interactive grid. Place obstacles, tune hyperparameters, and watch the agent learn the optimal path in real time.
 
