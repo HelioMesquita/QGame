@@ -131,23 +131,13 @@ class QLearning {
     }
 
     func getBestAction(coordinate: CoordinateQTable) -> Action {
-        let qBox = qTable[coordinate]!
-        var bestActions: [QAction] = []
-        for action in qBox.actions {
-            if bestActions.isEmpty {
-                bestActions.append(action)
-            } else if action.value == bestActions.first!.value {
-                bestActions.append(action)
-            } else if action.value > bestActions.first!.value {
-                bestActions.removeAll()
-                bestActions.append(action)
-            }
-        }
-        return bestActions.first!.action
+        let actions = qTable[coordinate]!.actions
+        let bestValue = actions.map(\.value).max()!
+        return actions.filter { $0.value == bestValue }.randomElement()!.action
     }
 
     func getRandomAction() -> Action {
-        return Action.allCases.shuffled().randomElement()!
+        return Action.allCases.randomElement()!
     }
 
     func getAction(coordinate: CoordinateQTable) -> Action {
